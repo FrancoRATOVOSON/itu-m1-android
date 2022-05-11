@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "CommonJS",
+    "lib": ["ESNext"],
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictFunctionTypes": false,
+    "useUnknownInCatchVariables": false,
+    "skipLibCheck": true,
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": [".yarn", "node_modules", "prisma", "dist"]
+}

@@ -1,0 +1,26 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false
+    },
+    "target": "es2022",
+    "loose": false,
+    "minify": {
+      "compress": true,
+      "mangle": false
+    }
+  },
+  "module": {
+    "type": "es6",
+    "noInterop": false
+  },
+  "sourceMaps": false,
+  "inlineSourcesContent": false,
+  "minify": true,
+  "env": {
+    "targets": {
+      "node": "16"
+    }
+  }
+}
