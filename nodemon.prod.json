@@ -1,0 +1,9 @@
+{
+  "watch": ["dist"],
+  "execMap": {
+    "js": "node"
+  },
+  "events": {
+    "restart": "clear"
+  }
+}

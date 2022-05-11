@@ -3,8 +3,7 @@
   "restartable": "rs",
   "watch": ["./src", "./node_modules/@prisma/client", "prisma"],
   "execMap": {
-    "dev": "node -r @swc-node/register ./src/index.ts",
-    "js": "node ./dist/index.js"
+    "ts": "node -r @swc-node/register"
   },
   "events": {
     "restart": "clear"
