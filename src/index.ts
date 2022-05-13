@@ -1,3 +1,15 @@
+import dotenv from 'dotenv'
+import http from 'http'
 import app from './server/app'
 
-app.listen(3000, () => console.log('Listening to http://localhost:3000'))
+dotenv.config()
+
+function start() {
+  const PORT = process.env.PORT || 8080
+
+  http.createServer(app).listen(PORT, () => {
+    console.log(`Server listening on: http://loaclhost;${PORT}/`)
+  })
+}
+
+start()
