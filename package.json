@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon ./src/index.ts --config nodemon.dev.json",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prod": "nodemon ./dist/index.js --config nodemon.prod.json",
+    "start": "yarn build && yarn prod"
   },
   "private": true,
   "packageManager": "yarn@3.2.0",
   "dependencies": {
+    "@prisma/client": "3.14.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",

@@ -1,0 +1,376 @@
+{
+  "entry": "http://url.final/api/",
+  "auth": {
+    "signup": {
+      "request": {
+        "action": "post",
+        "body": {
+          "firstname": "string",
+          "lastname": "string",
+          "email": "string",
+          "password": "string"
+        },
+        "example": {
+          "firstname": "kotozafy",
+          "lastname": "alexis",
+          "email": "kotoazafy.alexis@email.ex",
+          "password": "K0tozafy.1"
+        }
+      },
+      "reqponse": {
+        "body": {
+          "token": "string"
+        }
+      }
+    },
+    "login": {
+      "request": {
+        "action": "post",
+        "body": {
+          "email": "string",
+          "password": "string"
+        }
+      },
+      "response": {
+        "body": {
+          "token": "string"
+        }
+      }
+    }
+  },
+  "courses": [
+    {
+      "request": {
+        "action": "get"
+      },
+      "response": {
+        "body": {
+          "courses": {
+            "type": "array of object",
+            "fields": {
+              "id": "number",
+              "title": "string",
+              "description": "string",
+              "cover": "string"
+            }
+          }
+        },
+        "example": {
+          "courses": [
+            {
+              "id": 1234,
+              "title": "Cours de quelque chose",
+              "description": "Ici vous allez apprendre à faire ça.",
+              "cover": "http://liens.vers.la/photodecouverture"
+            },
+            {
+              "id": 5678,
+              "title": "Un autre cours",
+              "description": "Faisons autre chose maintenant.",
+              "cover": "http://liens.vers.la/photodecouverture"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "action": "get",
+        "queryString": {
+          "search": "string"
+        },
+        "example": {
+          "url": "http://url.final/api/courses/?search=langue"
+        }
+      },
+      "response": {
+        "body": {
+          "courses": {
+            "type": "array of object",
+            "fields": {
+              "id": "number",
+              "title": "string",
+              "description": "string",
+              "cover": "string"
+            }
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "action": "get",
+        "queryString": {
+          "tag": {
+            "type": "array of string",
+            "format": "tag=tag1&tag=tag2"
+          }
+        },
+        "example": {
+          "url": "http://url.final/api/courses?tag=math&tag=science&tag=lettre"
+        }
+      },
+      "response": {
+        "body": {
+          "courses": {
+            "type": "array of object",
+            "fields": {
+              "id": "number",
+              "title": "string",
+              "description": "string",
+              "cover": "string"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "course": [
+    {
+      "request": {
+        "action": "get",
+        "queryParams": {
+          "courseId": "number"
+        },
+        "example": {
+          "url": "http://url.final/api/course/1234"
+        }
+      },
+      "response": {
+        "body": {
+          "title": "string",
+          "description": "string",
+          "cover": "string",
+          "chapters": {
+            "type": "array of object",
+            "fields": {
+              "id": "string",
+              "title": "string"
+            }
+          }
+        },
+        "example": {
+          "title": "Cours de quelque chose",
+          "description": "Faisons autre chose maintenant.",
+          "cover": "http://liens.vers.la/photodecouverture",
+          "chapters": [
+            {
+              "id": 1357,
+              "title": "Étape 1: faire ceci"
+            },
+            {
+              "id": 2468,
+              "title": "Étape 2: faire cela"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "subscribe": {
+        "request": {
+          "action": "get",
+          "queryParams": {
+            "id": "number"
+          },
+          "queryString": {
+            "token": "string"
+          },
+          "example": {
+            "url": "http://url.final/api/course/subscribe/1234?token=LE_TOKEN_D_AUTHENTIFICATION"
+          }
+        },
+        "response": {
+          "body": {
+            "title": "string",
+            "description": "string",
+            "cover": "string",
+            "chapters": {
+              "type": "array of object",
+              "fields": {
+                "id": "string",
+                "title": "string"
+              }
+            }
+          },
+          "example": {
+            "title": "Cours de quelque chose",
+            "description": "Faisons autre chose maintenant.",
+            "cover": "http://liens.vers.la/photodecouverture",
+            "chapters": [
+              {
+                "id": 1357,
+                "title": "Étape 1: faire ceci"
+              },
+              {
+                "id": 2468,
+                "title": "Étape 2: faire cela"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "chapter": [
+    {
+      "request": {
+        "action": "get",
+        "queryParams": {
+          "id": "number"
+        }
+      },
+      "response": {
+        "body": {
+          "title": "string",
+          "description": "string",
+          "video": "string"
+        },
+        "example": {
+          "title": "Étape 1: faire ceci",
+          "description": "Commençons avec ceci.",
+          "video": "http://liens.vers.la/videoduchapitre"
+        }
+      }
+    },
+    {
+      "close": {
+        "request": {
+          "action": "get",
+          "queryParams": {
+            "id": "string"
+          },
+          "queryString": {
+            "token": "string"
+          }
+        },
+        "response": {
+          "body": {
+            "evaluation": {
+              "id": "string",
+              "questions": {
+                "type": "array of object",
+                "fields": {
+                  "id": "number",
+                  "question": "string",
+                  "options": {
+                    "type": "array of object",
+                    "fields": {
+                      "id": "number",
+                      "value": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "example": {
+            "evaluation": [
+              {
+                "id": 9876,
+                "questions": [
+                  {
+                    "id": 5432,
+                    "question": "Qu'est-ce-que c'est ?",
+                    "options": [
+                      {
+                        "id": 1,
+                        "value": "Choix A"
+                      },
+                      {
+                        "id": 2,
+                        "value": "Choix B"
+                      },
+                      {
+                        "id": 3,
+                        "value": "Choix C"
+                      }
+                    ]
+                  },
+                  {
+                    "id": 1098,
+                    "question": "Comment on fait ça ?",
+                    "options": [
+                      {
+                        "id": 5,
+                        "value": "Comme ci"
+                      },
+                      {
+                        "id": 6,
+                        "value": "Comme ça"
+                      },
+                      {
+                        "id": 7,
+                        "value": "Ainsi"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "verify": {
+        "request": {
+          "action": "post",
+          "body": {
+            "token": "string",
+            "evaluation": {
+              "type": "array of object",
+              "fields": {
+                "question": {
+                  "type": "number",
+                  "comment": "The ID of the question"
+                },
+                "answer": {
+                  "type": "number",
+                  "comment": "The ID of the choosed answer"
+                }
+              }
+            }
+          },
+          "example": {
+            "token": "LE_TOKEN_D_AUTHENTIFICATION",
+            "evaluation": [
+              {
+                "question": 5432,
+                "answer": 2
+              },
+              {
+                "question": 1098,
+                "answer": 5
+              }
+            ]
+          }
+        },
+        "response": {
+          "body": {
+            "score": {
+              "type": "array of object",
+              "fields": {
+                "question": "number",
+                "choice": "number",
+                "answer": "number"
+              }
+            }
+          },
+          "example": {
+            "score": [
+              {
+                "question": 5432,
+                "choice": 2,
+                "answer": 2
+              },
+              {
+                "question": 1098,
+                "choice": 5,
+                "answer": 7
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
