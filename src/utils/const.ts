@@ -25,3 +25,5 @@ export const PASSWORD_NONALPHA_ERROR = passwordMustContains(
 
 export const SEARCH_MUST_BE_A_STRING =
   'Sorry, you can only search 1 term at a time'
+
+export const ID_MUST_BE_A_NUMBER = 'Request error: course id must be a number'

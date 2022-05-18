@@ -46,3 +46,7 @@ export function searchCoursesWithTag(term: string, tags: string[]) {
     select: COURSE_RETURNED_FIELDS
   })
 }
+
+export function getCourse(id: number) {
+  return prisma.course.findUnique({ where: { id } })
+}
