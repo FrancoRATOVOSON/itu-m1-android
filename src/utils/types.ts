@@ -11,3 +11,8 @@ export type SignupInput = Omit<
   Prisma.UserCreateInput,
   'subscriptions' | 'progrssions'
 >
+
+export type SearchCoursesParamsType = {
+  term?: string
+  tags?: string[]
+}

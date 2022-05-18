@@ -88,11 +88,11 @@ export function signupFormValidation(
     isValid = false
   }
   if (!firstname) {
-    message += '-<firstName>'
+    message += '-<firstname>'
     isValid = false
   }
   if (!lastname) {
-    message += '-<lastName>'
+    message += '-<lastname>'
     isValid = false
   }
 

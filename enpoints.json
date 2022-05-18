@@ -80,7 +80,7 @@
           "search": "string"
         },
         "example": {
-          "url": "http://url.final/api/courses/?search=langue"
+          "url": "http://url.final/api/courses?search=langue"
         }
       },
       "response": {
@@ -91,7 +91,7 @@
               "id": "number",
               "title": "string",
               "description": "string",
-              "cover": "string"
+              "coverUrl": "string"
             }
           }
         }

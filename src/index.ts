@@ -8,7 +8,7 @@ function start() {
   const PORT = process.env.PORT || 8080
 
   http.createServer(app).listen(PORT, () => {
-    console.log(`Server listening on: http://loaclhost;${PORT}/`)
+    console.log(`Server listening on: http://loaclhost:${PORT}/`)
   })
 }
 

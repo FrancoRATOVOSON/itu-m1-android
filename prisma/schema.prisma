@@ -38,15 +38,14 @@ model Course {
 model TagOnCourse {
   courseId Int @map("course_id")
   course Course @relation(fields: [courseId], references: [id])
-  tagId Int @map("tag_id")
-  tag Tag @relation(fields: [tagId], references: [id])
-  @@id([courseId, tagId])
+  tagValue String @map("tag_value")
+  tag Tag @relation(fields: [tagValue], references: [value])
+  @@id([courseId, tagValue])
   @@map("tag_on_course")
 }
 
 model Tag {
-  id Int @id @default(autoincrement())
-  value String
+  value String @id
   tagOnCourse TagOnCourse[]
   @@map("tags")
 }

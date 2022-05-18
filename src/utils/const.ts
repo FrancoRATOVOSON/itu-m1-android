@@ -22,3 +22,6 @@ export const PASSWORD_DIGIT_ERROR = passwordMustContains(
 export const PASSWORD_NONALPHA_ERROR = passwordMustContains(
   '1 special character'
 )
+
+export const SEARCH_MUST_BE_A_STRING =
+  'Sorry, you can only search 1 term at a time'
