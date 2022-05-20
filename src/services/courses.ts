@@ -1,11 +1,18 @@
 import prisma from '../tools/prisma'
 import { SearchCoursesParamsType } from '../utils/types'
 
-const COURSE_RETURNED_FIELDS = {
+const COURSE_LIST_RETURNED_FIELDS = {
   id: true,
   title: true,
   description: true,
   coverUrl: true
+}
+
+const COURSE_RETURNED_FIELDS = {
+  title: true,
+  description: true,
+  coverUrl: true,
+  chapters: { select: { id: true, title: true } }
 }
 
 const SEARCH_BY_TERM_CONDITION = term => ({ title: { contains: term } })
@@ -14,7 +21,7 @@ const SEARCH_BY_TAG_CONDITION = tags => ({
 })
 
 export function getCourses() {
-  return prisma.course.findMany({ select: COURSE_RETURNED_FIELDS })
+  return prisma.course.findMany({ select: COURSE_LIST_RETURNED_FIELDS })
 }
 
 export function getCoursesByParams({ term, tags }: SearchCoursesParamsType) {
@@ -27,14 +34,14 @@ export function getCoursesByParams({ term, tags }: SearchCoursesParamsType) {
 export function searchCourse(term: string) {
   return prisma.course.findMany({
     where: SEARCH_BY_TERM_CONDITION(term),
-    select: COURSE_RETURNED_FIELDS
+    select: COURSE_LIST_RETURNED_FIELDS
   })
 }
 
 export function getCoursesByTags(tags: string[]) {
   return prisma.course.findMany({
     where: SEARCH_BY_TAG_CONDITION(tags),
-    select: COURSE_RETURNED_FIELDS
+    select: COURSE_LIST_RETURNED_FIELDS
   })
 }
 
@@ -43,10 +50,21 @@ export function searchCoursesWithTag(term: string, tags: string[]) {
     where: {
       AND: [SEARCH_BY_TERM_CONDITION(term), SEARCH_BY_TAG_CONDITION(tags)]
     },
-    select: COURSE_RETURNED_FIELDS
+    select: COURSE_LIST_RETURNED_FIELDS
   })
 }
 
 export function getCourse(id: number) {
-  return prisma.course.findUnique({ where: { id } })
+  return prisma.course.findUnique({
+    where: { id },
+    select: COURSE_RETURNED_FIELDS
+  })
+}
+
+export function subscribeToCourse(courseId: number, userId: number) {
+  return prisma.course.update({
+    where: { id: courseId },
+    data: { subscriptions: { create: { userId } } },
+    select: COURSE_RETURNED_FIELDS
+  })
 }

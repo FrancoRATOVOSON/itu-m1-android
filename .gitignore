@@ -17,5 +17,6 @@ coverage
 !.yarn/versions
 
 .VSCodeCounter
+.VSCodeCounter/*
 
 dist

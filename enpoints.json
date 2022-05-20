@@ -169,11 +169,11 @@
     {
       "subscribe": {
         "request": {
-          "action": "get",
+          "action": "put",
           "queryParams": {
             "id": "number"
           },
-          "queryString": {
+          "body": {
             "token": "string"
           },
           "example": {
@@ -236,18 +236,18 @@
     {
       "close": {
         "request": {
-          "action": "get",
+          "action": "put",
           "queryParams": {
             "id": "string"
           },
-          "queryString": {
+          "body": {
             "token": "string"
           }
         },
         "response": {
           "body": {
             "evaluation": {
-              "id": "string",
+              "id": "number",
               "questions": {
                 "type": "array of object",
                 "fields": {
@@ -314,6 +314,9 @@
       "verify": {
         "request": {
           "action": "post",
+          "queryParams": {
+            "id": "number"
+          },
           "body": {
             "token": "string",
             "evaluation": {

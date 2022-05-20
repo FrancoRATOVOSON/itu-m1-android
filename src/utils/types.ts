@@ -16,3 +16,8 @@ export type SearchCoursesParamsType = {
   term?: string
   tags?: string[]
 }
+
+export type EvalutaionType = {
+  question: number
+  answer: number
+}

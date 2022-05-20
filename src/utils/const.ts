@@ -1,5 +1,8 @@
 export const SERVER_ERROR = 'Oups!! Something went wrong'
 
+export const TOKEN_ERROR =
+  'Authorization error: You are not allowed to make this action'
+
 export const LOGIN_REQUIRED_ERROR =
   'You must be logged in to perform this action'
 

@@ -81,8 +81,8 @@ model Evaluation {
 
 model Question {
   id Int @id @default(autoincrement())
-  label String
-  Option Option[] @relation("question_Option")
+  question String
+  options Option[] @relation("question_Option")
   answerId Int @map("answer_id")
   answer Option @relation(name: "question_answer", fields: [answerId], references: [id], onDelete: Restrict, onUpdate: NoAction)
   evaluationId Int @map("evaluation_id")
