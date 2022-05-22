@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "nodemon ./src/index.ts --config nodemon.dev.json",
     "build": "rollup -c",
-    "prod": "nodemon ./dist/index.js --config nodemon.prod.json",
+    "prod": "nodemon ./api/index.js --config nodemon.prod.json",
     "start": "yarn build && yarn prod",
     "test": "jest"
   },
