@@ -9,5 +9,6 @@ app.use(cors())
 app.use(bodyParser.json())
 
 app.use('/api', api)
+app.get('/', (req, res) => res.send('Hello, everything is fine'))
 
 export default app
