@@ -1,0 +1,226 @@
+{
+  "courses": [
+    {
+      "title": "Cours de Français",
+      "description": "Apprendre le français pour les enfants.",
+      "cover": "https://res.cloudinary.com/duw4pkdvg/image/upload/v1653206122/itu-android/images/cours_francais.jpg",
+      "chapters": [
+        {
+          "title": "Étape 1: les syllabes pour les enfants",
+          "description": "Apprenez les  sylles.",
+          "video": "https://res.cloudinary.com/duw4pkdvg/video/upload/v1653206308/itu-android/videos/etape_1_les_syllabes_pour_les_enfants.mkv",
+          "evaluation": [
+            {
+              "question": "Combien de syllabes il y a dans \"bateau\" ?",
+              "options": ["2 syllabe", "3 syllabe"],
+              "answer": "3 syllabes"
+            },
+            {
+              "question": "Quelle est la première syllabe du mot \"bélier\" ?",
+              "options": ["li", "er"],
+              "answer": "bé"
+            },
+            {
+              "question": "Quelle est la dernière syllabe du mot \"bisous\" ?",
+              "options": ["bi", "iso"],
+              "answer": "sou"
+            }
+          ]
+        },
+        {
+          "title": "Étape 2: se présenter",
+          "description": "Apprenez à vous présenter en français : nom, prénom, âge, profession,.",
+          "video": "https://res.cloudinary.com/duw4pkdvg/video/upload/v1653206745/itu-android/videos/etape_2_se_presenter.mkv",
+          "evaluation": [
+            {
+              "question": "Dans la phrase \"Je m'appelle Marie Dubois.\", quel est le prénom ?",
+              "options": ["Je", "Dubois"],
+              "answer": "Marie"
+            },
+            {
+              "question": "Laquelle des phrases ci-dessous est la bonne manière de présenter son âge :",
+              "options": ["Je suis né en 25ans.", "J'ai 18 Juillet 1995."],
+              "answer": "Je suis né le 18 Juillet 1995"
+            },
+            {
+              "question": "Quelle est la manière correcte de présenter sa nationalité parmis les choix si-dessous :",
+              "options": ["Je suis d'origine Belgique.", "Je suis Angleterre"],
+              "answer": "Je suis de nationalité Française."
+            }
+          ]
+        },
+        {
+          "title": "Étape 3: les salutations et les formules de politesse",
+          "description": "Cette vidéo vous apprend toutes les formules de politesse et les manières de saluer quelqu'un en français.",
+          "video": "https://res.cloudinary.com/duw4pkdvg/video/upload/v1653206987/itu-android/videos/etape_3_les_salutations_et_les_formules_de_politesse.mkv",
+          "evaluation": [
+            {
+              "question": "Quelle formule utilise-t-on pour saluer le matin ?",
+              "options": ["Bonne nuit", "Bon appétit"],
+              "answer": "Bonjour"
+            },
+            {
+              "question": "Avec quelle formule peut-on remplacer \"Bonjour\" en langage familier ?",
+              "options": ["Bonne nuit", "Merci"],
+              "answer": "Salut"
+            },
+            {
+              "question": "Qu'est-ce-qu'on dit quand on fait la connaissance que quelqu'un ?",
+              "options": ["Au revoir", "De rien"],
+              "answer": "Enchanté"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cours de Math",
+      "description": "Apprendre ls maths pour les enfants.",
+      "cover": "https://res.cloudinary.com/duw4pkdvg/image/upload/v1653208065/itu-android/images/cours_math.jpg",
+      "chapters": [
+        {
+          "title": "Étape 1: Les Tables d'Addition pour les enfants",
+          "description": "Apprenez à votre enfant la table d'addition de 2, avec l'aide de bouchons de couleurs. Une vidéo marrante et rigolote pour permettre à votre enfant .",
+          "video": "https://res.cloudinary.com/duw4pkdvg/video/upload/v1653208187/itu-android/videos/etape_1_les_tables_d_addition_pour_les_enfants.mkv",
+          "evaluation": [
+            {
+              "question": "Quel est le résultat de 12 + 3 ?",
+              "options": ["12", "3"],
+              "answer": "15"
+            },
+            {
+              "question": "Le résultat de 1400 + 200 + 50 + 3 est 1653.",
+              "options": ["faux"],
+              "answer": "vrai"
+            },
+            {
+              "question": "6 plus combien font 10 ?",
+              "options": ["5", "6"],
+              "answer": "4"
+            }
+          ]
+        },
+        {
+          "title": "Étape 2: Les techniques de calcul mental",
+          "description": " Les techniques de calcul mental expliquées aux élèves de CE1. L' addtition à 0:10min. Les 4 techniques de soustractions à 1:20min, 2:25min, 3:25min, 4:25min. La multiplication à 6:45min..",
+          "video": "https://res.cloudinary.com/duw4pkdvg/video/upload/v1653208533/itu-android/videos/etape_2_les_techniques_de_calcul_mental_ce1.mkv",
+          "evaluation": [
+            {
+              "question": "Combien font 35 + 27 ?",
+              "options": ["65", "58"],
+              "answer": "62"
+            },
+            {
+              "question": "Combien font 50 - 27 ?",
+              "options": ["13", "33"],
+              "answer": "23"
+            },
+            {
+              "question": "Combien font 82 - 26 ?",
+              "options": ["46", "66"],
+              "answer": "56"
+            }
+          ]
+        },
+        {
+          "title": "Étape 3: Apprendre les tables de multiplication",
+          "description": "Voici une petite vidéo pour apprendre les tables de multiplication en s'amusant. Sur cette vidéo, l'enfant apprendra les tables de 2, 3, 4  et 5.",
+          "video": "https://res.cloudinary.com/duw4pkdvg/video/upload/v1653208913/itu-android/videos/etape_3_apprendre_les_tables_de_multiplication.mkv",
+          "evaluation": [
+            {
+              "question": "Combien font 2 x 9 ?",
+              "options": ["20", "19"],
+              "answer": "18"
+            },
+            {
+              "question": "Combien font 5 x 5 ?",
+              "options": ["50", "5"],
+              "answer": "25"
+            },
+            {
+              "question": "4 x 3 = 17, vrai ou faux ?",
+              "options": ["vrai"],
+              "answer": "faux"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cours de SVT",
+      "description": "Apprendre la SVT pour les enfants.",
+      "cover": "https://res.cloudinary.com/duw4pkdvg/image/upload/v1653209218/itu-android/images/cours_svt.jpg",
+      "chapters": [
+        {
+          "title": "Étape 1: Les parties du corps humain pour les enfants",
+          "description": "Dans cette vidéo éducative pour les enfants, ils pourront en apprendre plus sur les parties du corps. Dans celle-ci ils connaîtront leur corps et quel est le nom de chacune de ses parties.",
+          "video": "https://res.cloudinary.com/duw4pkdvg/video/upload/v1653209446/itu-android/videos/etape_1_les_parties_du_corps_humain_pour_les_enfants.mkv",
+          "evaluation": [
+            {
+              "question": "Combien d'yeux le corps humain a-t-il ?",
+              "options": ["1", "3"],
+              "answer": "2"
+            },
+            {
+              "question": "Où se trouve le nez ?",
+              "options": ["Dans la main.", "Au dos."],
+              "answer": "Sur la tête."
+            },
+            {
+              "question": "La main a 5 doigts, vrai ou faux ?",
+              "options": ["faux"],
+              "answer": "vrai"
+            }
+          ]
+        },
+        {
+          "title": "Étape 2: Les cinq sens",
+          "description": "Découvrons les 5 organes du sens",
+          "video": "https://res.cloudinary.com/duw4pkdvg/video/upload/v1653209858/itu-android/videos/etape_2_les_cinq_sens.mkv",
+          "evaluation": [
+            {
+              "question": "Quels sont nos 5 sens ?",
+              "options": [
+                "La vue, l'humour, l'odorat et le toucher",
+                "La tête, les yeux, les pieds, la bouche et le ventre"
+              ],
+              "answer": "La vue, l'ouïe, le goût, l'odorat et le toucher."
+            },
+            {
+              "question": "Quel est l'organe de la vue ?",
+              "options": ["la peau", "Les cheveux"],
+              "answer": "les yeux"
+            },
+            {
+              "question": "La langue est l'organe du goût, vrai ou faux ?",
+              "options": ["faux"],
+              "answer": "vrai"
+            }
+          ]
+        },
+        {
+          "title": "Étape 3: Les animaux sauvages",
+          "description": "Découvrons les animaux sauvages comme le lion, l'éléphant, la girafe, le singe, le crocodile, le gorille, le zèbre, le tigre, le rhinocéros, l'ours, le loup et beaucoup d'autres.",
+          "video": "https://res.cloudinary.com/duw4pkdvg/video/upload/v1653210011/itu-android/videos/etape_3_les_animaux_sauvages.mkv",
+          "evaluation": [
+            {
+              "question": "Quel animal est le roi de la savane ?",
+              "options": ["Le lapin", "La vache", "Le tigre"],
+              "answer": "Le lion"
+            },
+            {
+              "question": "Lequel de ces animaux a une trompe ?",
+              "options": ["Le lion", "Le zèbre", "La girafe", "Le crocodile"],
+              "answer": "L'éléphant"
+            },
+            {
+              "question": "De quelles couleurs sont les rayures du zèbre?",
+              "options": ["Vertes et oranges", "Jaunes et bleues"],
+              "answer": "Noires et blanches"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

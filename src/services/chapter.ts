@@ -46,11 +46,7 @@ export function verifyChapter(
       tests: {
         select: {
           questionId: true,
-          question: {
-            select: {
-              options: { select: { id: true }, where: { isTheAnswer: true } }
-            }
-          },
+          question: { select: { options: {select: {id: true}, where: {isTheAnswer: true}} } },
           selectedOptionId: true
         }
       }
