@@ -1,1 +1,1 @@
-web: yarn install && yarn start
+web: node ./api/index.js
