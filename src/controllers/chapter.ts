@@ -53,9 +53,17 @@ export const verifyChapter = async (req: Request, res: Response) => {
       return
     }
     const { evaluation } = req.body
-    res
-      .status(200)
-      .json({ ...(await vrChapter(chapterId, userId, evaluation)) })
+    const result = await vrChapter(chapterId, userId, evaluation)
+    res.status(200).json({
+      score: result.tests.map(test => {
+        const { question, questionId, selectedOptionId } = test
+        return {
+          question: questionId,
+          choice: selectedOptionId,
+          answer: question.options[0].id
+        }
+      })
+    })
   } catch (err) {
     console.error(err)
     res.status(500).json({ message: SERVER_ERROR })

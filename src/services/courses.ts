@@ -1,5 +1,10 @@
 import prisma from '../tools/prisma'
-import { SearchCoursesParamsType } from '../utils/types'
+import {
+  ChapterInputType,
+  CourseInputType,
+  EvaluationInputType,
+  SearchCoursesParamsType
+} from '../utils/types'
 
 const COURSE_LIST_RETURNED_FIELDS = {
   id: true,
@@ -66,5 +71,59 @@ export function subscribeToCourse(courseId: number, userId: number) {
     where: { id: courseId },
     data: { subscriptions: { create: { userId } } },
     select: COURSE_RETURNED_FIELDS
+  })
+}
+
+export function createQuestionOptions(options: string[], questionId: number) {
+  return prisma.option.createMany({
+    data: options.map(value => ({ value, questionId }))
+  })
+}
+
+export function createQuestionAnswer(value: string, questionId: number) {
+  return prisma.option.create({
+    data: { value, isTheAnswer: true, questionId }
+  })
+}
+
+export function createQuestion(question: string, chapterId: number) {
+  return prisma.question.create({ data: { question, chapterId } })
+}
+
+export async function createEvaluation(
+  evaluation: EvaluationInputType,
+  chapterId: number
+) {
+  const { question, options, answer } = evaluation
+  const newQuestion = await createQuestion(question, chapterId)
+  await createQuestionOptions(options, newQuestion.id)
+  await createQuestionAnswer(answer, newQuestion.id)
+}
+
+export function createChapter(
+  chapter: Omit<ChapterInputType, 'evaluation'>,
+  courseId: number
+) {
+  const { title, description, video } = chapter
+  return prisma.chapter.create({
+    data: { title, description, videoUrl: video, courseId }
+  })
+}
+
+export async function createCourse(input: CourseInputType) {
+  const { chapters, title, description, cover } = input
+  const course = await prisma.course.create({
+    data: {
+      title,
+      description,
+      coverUrl: cover
+    }
+  })
+  chapters.forEach(async chapter => {
+    const { evaluation, ...chaptr } = chapter
+    const newChapter = await createChapter(chaptr, course.id)
+    evaluation.forEach(async evl => {
+      await createEvaluation(evl, newChapter.id)
+    })
   })
 }

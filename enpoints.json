@@ -51,7 +51,7 @@
               "id": "number",
               "title": "string",
               "description": "string",
-              "cover": "string"
+              "coverUrl": "string"
             }
           }
         },
@@ -61,13 +61,13 @@
               "id": 1234,
               "title": "Cours de quelque chose",
               "description": "Ici vous allez apprendre à faire ça.",
-              "cover": "http://liens.vers.la/photodecouverture"
+              "coverUrl": "http://liens.vers.la/photodecouverture"
             },
             {
               "id": 5678,
               "title": "Un autre cours",
               "description": "Faisons autre chose maintenant.",
-              "cover": "http://liens.vers.la/photodecouverture"
+              "coverUrl": "http://liens.vers.la/photodecouverture"
             }
           ]
         }
@@ -91,7 +91,7 @@
               "id": "number",
               "title": "string",
               "description": "string",
-              "coverUrl": "string"
+              "coverUrlUrl": "string"
             }
           }
         }
@@ -118,7 +118,7 @@
               "id": "number",
               "title": "string",
               "description": "string",
-              "cover": "string"
+              "coverUrl": "string"
             }
           }
         }
@@ -140,7 +140,7 @@
         "body": {
           "title": "string",
           "description": "string",
-          "cover": "string",
+          "coverUrl": "string",
           "chapters": {
             "type": "array of object",
             "fields": {
@@ -152,7 +152,7 @@
         "example": {
           "title": "Cours de quelque chose",
           "description": "Faisons autre chose maintenant.",
-          "cover": "http://liens.vers.la/photodecouverture",
+          "coverUrl": "http://liens.vers.la/photodecouverture",
           "chapters": [
             {
               "id": 1357,
@@ -173,18 +173,18 @@
           "queryParams": {
             "id": "number"
           },
-          "body": {
-            "token": "string"
+          "headers": {
+            "authorization": "Bearer AUTHENTICATION_TOKEN"
           },
           "example": {
-            "url": "http://url.final/api/course/subscribe/1234?token=LE_TOKEN_D_AUTHENTIFICATION"
+            "url": "http://url.final/api/course/subscribe/1234"
           }
         },
         "response": {
           "body": {
             "title": "string",
             "description": "string",
-            "cover": "string",
+            "coverUrl": "string",
             "chapters": {
               "type": "array of object",
               "fields": {
@@ -196,7 +196,7 @@
           "example": {
             "title": "Cours de quelque chose",
             "description": "Faisons autre chose maintenant.",
-            "cover": "http://liens.vers.la/photodecouverture",
+            "coverUrl": "http://liens.vers.la/photodecouverture",
             "chapters": [
               {
                 "id": 1357,
@@ -224,12 +224,12 @@
         "body": {
           "title": "string",
           "description": "string",
-          "video": "string"
+          "videoUrl": "string"
         },
         "example": {
           "title": "Étape 1: faire ceci",
           "description": "Commençons avec ceci.",
-          "video": "http://liens.vers.la/videoduchapitre"
+          "videoUrl": "http://liens.vers.la/videoUrlduchapitre"
         }
       }
     },
@@ -240,8 +240,8 @@
           "queryParams": {
             "id": "string"
           },
-          "body": {
-            "token": "string"
+          "headers": {
+            "authorization": "Bearer AUTHENTICATION_TOKEN"
           }
         },
         "response": {
@@ -317,8 +317,10 @@
           "queryParams": {
             "id": "number"
           },
+          "headers": {
+            "authorization": "Bearer AUTHENTICATION_TOKEN"
+          },
           "body": {
-            "token": "string",
             "evaluation": {
               "type": "array of object",
               "fields": {
@@ -334,7 +336,6 @@
             }
           },
           "example": {
-            "token": "LE_TOKEN_D_AUTHENTIFICATION",
             "evaluation": [
               {
                 "question": 5432,

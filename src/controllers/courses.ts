@@ -9,7 +9,8 @@ import {
   getCourses as gCources,
   getCoursesByParams,
   getCourse as gCourse,
-  subscribeToCourse as subToCourse
+  subscribeToCourse as subToCourse,
+  createCourse
 } from '../services/courses'
 
 export const getCourses = async (req: Request, res: Response) => {
@@ -68,4 +69,13 @@ export const subscribeToCourse = async (req: Request, res: Response) => {
     console.error(err)
     res.status(500).json({ message: SERVER_ERROR })
   }
+}
+
+export const newCourse = (req: Request, res: Response) => {
+  createCourse(req.body)
+    .then(() => res.status(200).send('Done'))
+    .catch(err => {
+      console.error(err)
+      res.status(500).json({ message: SERVER_ERROR })
+    })
 }

@@ -13,16 +13,12 @@ export function closeChapter(userId: number, chapterId: number) {
     where: { id: chapterId },
     data: { progressions: { create: { userId, isFinished: true } } },
     select: {
-      evaluation: {
+      id: true,
+      questions: {
         select: {
           id: true,
-          questions: {
-            select: {
-              id: true,
-              question: true,
-              options: { select: { id: true, value: true } }
-            }
-          }
+          question: true,
+          options: { select: { id: true, value: true } }
         }
       }
     }
@@ -50,7 +46,11 @@ export function verifyChapter(
       tests: {
         select: {
           questionId: true,
-          question: { select: { answerId: true } },
+          question: {
+            select: {
+              options: { select: { id: true }, where: { isTheAnswer: true } }
+            }
+          },
           selectedOptionId: true
         }
       }
