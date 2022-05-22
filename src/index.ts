@@ -11,7 +11,7 @@ function start() {
   http.createServer(app).listen(PORT, () => {
     console.log(`Server listening on: http://loaclhost:${PORT}/`)
   }) */
-  app.listen(80, () => {
+  app.listen(PORT, () => {
     console.log(`Server listening on: http://loaclhost:${PORT}/`)
   })
 }
