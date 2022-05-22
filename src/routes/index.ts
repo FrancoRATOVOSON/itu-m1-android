@@ -9,7 +9,6 @@ const router = express.Router()
 router.use('/auth', authRoute)
 router.use('/course', courseRoute)
 router.use('/chapter', chapterRoute)
-router.get('/home', (req, res) => res.send('Hello, everything is fine'))
 router.use('/', coursesRoute)
 
 export default router

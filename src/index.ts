@@ -1,8 +1,7 @@
-// import dotenv from 'dotenv'
-// import http from 'http'
+import dotenv from 'dotenv'
+import http from 'http'
 import app from './server/app'
 
-/*
 dotenv.config()
 
 function start() {
@@ -14,6 +13,3 @@ function start() {
 }
 
 start()
-*/
-
-export default app
