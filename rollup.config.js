@@ -6,7 +6,7 @@ const swcrc = JSON.parse(fs.readFileSync('./rollup.swcrc.json'))
 export default {
   input: './src/index.ts',
   output: {
-    file: './dist/index.js',
+    file: './api/index.js',
     format: 'cjs'
   },
   external: [

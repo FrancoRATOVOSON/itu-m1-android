@@ -1,5 +1,5 @@
 {
-  "watch": ["dist"],
+  "watch": ["api"],
   "execMap": {
     "js": "node"
   },
