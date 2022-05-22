@@ -1,5 +1,5 @@
 {
-  "entry": "http://url.final/api/",
+  "entry": "https://itu-m1-android.herokuapp.com/api",
   "auth": {
     "signup": {
       "request": {
@@ -80,7 +80,7 @@
           "search": "string"
         },
         "example": {
-          "url": "http://url.final/api/courses?search=langue"
+          "url": "https://itu-m1-android.herokuapp.com/api/courses?search=langue"
         }
       },
       "response": {
@@ -107,7 +107,7 @@
           }
         },
         "example": {
-          "url": "http://url.final/api/courses?tag=math&tag=science&tag=lettre"
+          "url": "https://itu-m1-android.herokuapp.com/api/courses?tag=math&tag=science&tag=lettre"
         }
       },
       "response": {
@@ -133,7 +133,7 @@
           "courseId": "number"
         },
         "example": {
-          "url": "http://url.final/api/course/1234"
+          "url": "https://itu-m1-android.herokuapp.com/api/course/1234"
         }
       },
       "response": {
@@ -177,7 +177,7 @@
             "authorization": "Bearer AUTHENTICATION_TOKEN"
           },
           "example": {
-            "url": "http://url.final/api/course/subscribe/1234"
+            "url": "https://itu-m1-android.herokuapp.com/api/course/subscribe/1234"
           }
         },
         "response": {
